@@ -1,0 +1,33 @@
+
+<div class="container">
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Color</th>
+      <th>Marka</th>
+      <th>Year</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let autoInHtml of autoVariable">
+
+      <!--      ide az adat: auto-list.model.ts-ből származik!!!-->
+      <!--      azt kötöttük be előbb auto-list.ts-ben!!!-->
+      <!--      DE NE FELEDD A MOVIE-LIST.MODEL-ben is PONTOSAN A MovieList fieldjei jönnek!!!-->
+
+      <td>{{autoInHtml.id}}</td>
+      <td>{{autoInHtml.color}}</td>
+      <td>{{autoInHtml.marka}}</td>
+      <td>{{autoInHtml.year}}</td>
+
+      <td>
+        <button class="btn btn-primary" (click)="goToAutoDetails(autoInHtml.id)">Details</button>
+        <button class="btn btn-danger" (click)="deleteAuto(autoInHtml.id)">Delete</button>
+      </td>
+
+    </tr>
+    </tbody>
+  </table>
+</div>

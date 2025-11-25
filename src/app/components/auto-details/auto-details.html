@@ -1,0 +1,19 @@
+<p>auto-details works!</p>
+
+<div *ngIf="auto" class="container">
+
+<!--  <img [src]="auto.posterUrl" [alt]="movie.title">-->
+
+  <div class="mt-3">
+    <h2>{{ auto.marka }}</h2>
+    <h2>{{ auto.year }}</h2>
+
+<!--&lt;!&ndash;    <p *ngFor="let genre of auto.genres; let isLast = last">&ndash;&gt;-->
+<!--      <span class="badge bg-primary">{{ genre }}{{ isLast ? '' : ', ' }}</span>  &lt;!&ndash; így nincs sortörés &ndash;&gt;-->
+<!--    </p>-->
+
+    <p>Directed by: <strong>{{ auto.year }}</strong></p>
+    <p>{{ auto.color }}</p>
+  </div>
+</div>
+

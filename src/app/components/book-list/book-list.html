@@ -1,0 +1,28 @@
+<p>book-list works!</p>
+
+<div class="container">
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let autoInHtml of bookVariable">
+
+      <!--      ide az adat: auto-list.model.ts-ből származik!!!-->
+      <!--      azt kötöttük be előbb auto-list.ts-ben!!!-->
+      <!--      DE NE FELEDD A MOVIE-LIST.MODEL-ben is PONTOSAN A MovieList fieldjei jönnek!!!-->
+
+      <td>{{autoInHtml.id}}</td>
+      <td>{{autoInHtml.title}}</td>
+      <td>{{autoInHtml.author}}</td>
+      <td>{{autoInHtml.price}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+

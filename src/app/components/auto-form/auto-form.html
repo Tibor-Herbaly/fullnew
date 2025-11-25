@@ -1,0 +1,18 @@
+<p>auto-form works!</p>
+
+<div class="container">
+
+  <h2 class="m-3">Movie Form</h2>
+  <hr>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <div class="mb-3">
+      <label for="marka" class="form-label">Auto title</label>
+      <input id="marka" class="form-control" placeholder="Auto title" type="text" formControlName="marka"
+             [ngClass]="{ 'is-invalid': form.get('marka')?.invalid && form.get('marka')?.touched }">
+      <small class="text-danger" *ngIf="form.get('marka')?.invalid && form.get('marka')?.touched">Please enter a title</small>
+    </div>
+    <button [disabled]="form.invalid" class="btn btn-primary" type="submit">Submit</button>
+  </form>
+</div>
